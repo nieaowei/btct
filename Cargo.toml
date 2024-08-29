@@ -1,0 +1,47 @@
+[package]
+name = "btct"
+version = "0.0.1"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name = "btct"
+path = "src/bin/main.rs"
+
+[lib]
+name = "btct"
+path = "src/lib.rs"
+
+[dependencies]
+bitcoin = { version = "0.31.0", features = ["rand-std"] }
+miniscript = { version = "11.0.0", features = ["serde", "rand"] }
+bdk = { version = "1.0.0-alpha.10", features = ["all-keys"] }
+ordinals = { version = "0.0.8" }
+
+clap = { version = "4.5.4", features = ["derive"] }
+toml = "0.8.12"
+serde = { version = "1.0.199", features = ["derive", "serde_derive"] }
+anyhow = "1.0.82"
+reqwest = { version = "0.12.4", features = ["json", "blocking"] }
+serde_json = { version = "1.0.116", features = ["preserve_order"] }
+bitcoinconsensus = { version = "0.106.0+26.0" }
+hex = "0.4.3"
+bip39 = { version = "2.0.0", features = ["rand"] }
+
+
+
+log = "0.4.21"
+env_logger = "0.11.3"
+
+scraper = { version = "0.19.0" }
+console-utils = "1.6.0"
+comfy-table = "7.1.1"
+regex = "1.10.4"
+
+governor = "0.6.3"
+
+axum = { version = "0.7.5", features = ["json"] }
+tokio = { version = "1.37.0", features = ["full", "macros"] }
+serde_repr = "0.1.19"
+rodio = "0.18.0"
+include_dir = "0.7.3"

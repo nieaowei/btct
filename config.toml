@@ -1,0 +1,18 @@
+network = "bitcoin"
+mnemonic = ""
+wallet_mode = "peek" # xverse peek other default: other
+poison_mnemonic = ""
+
+ordi_api = "https://ordindexer.satsx.io"
+rpc_api = ""
+
+# body_format = "{\"hex\":\"$tx\"}"
+[[broadcast_rest_apis]]
+api_addr = "https://mempool.space/api/tx"
+body_format = "$tx"
+[[broadcast_rest_apis]]
+api_addr = "https://blockstream.info/api/tx"
+body_format = "$tx"
+[[broadcast_rest_apis]]
+api_addr = "https://chain.api.btc.com/tools/tx-publish"
+body_format = "{\"rawhex\": \"$tx\"}"
